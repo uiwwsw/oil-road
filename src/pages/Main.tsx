@@ -5,9 +5,10 @@ const Main = () => {
   
     return (
       <>
-      <div className="h-9">dawdawd</div>
-      <NaverMap></NaverMap>
-      dkjaw;ldkawl;kd;awd</>
+        <div className="h-9">dawdawd</div>
+        <NaverMap className="h-56"/>
+        dkjaw;ldkawl;kd;awd
+      </>
     )
   }
   
