@@ -1,6 +1,6 @@
-import Main from '!/Main';
-import { useState } from 'react'
-import { BrowserRouter,Route, Routes } from "react-router-dom";
+import Main from "!/Main";
+import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
@@ -11,11 +11,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-
-        <Route path="/" Component={Main}/> 
-        <Route path="/2" Component={Main}/> 
+        <Route path="/" Component={Main} />
+        <Route path="/2" Component={Main} />
       </Routes>
-        {/* <Route path="/photo" component={Photo}/>
+      {/* <Route path="/photo" component={Photo}/>
         <Route path="/rooms" component={Rooms}/> */}
     </BrowserRouter>
     // <>
@@ -41,7 +40,7 @@ const App = () => {
     //     Click on the Vite and React logos to learn more
     //   </p>
     // </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
