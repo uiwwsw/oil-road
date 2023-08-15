@@ -1,5 +1,5 @@
 import Main from "!/Main";
-import { useState } from "react";
+import Tutorial from "!/Tutorial";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // import reactLogo from './assets/react.svg'
@@ -12,7 +12,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" Component={Main} />
-        <Route path="/2" Component={Main} />
+        <Route path="/tutorial" Component={Tutorial} />
       </Routes>
       {/* <Route path="/photo" component={Photo}/>
         <Route path="/rooms" component={Rooms}/> */}
