@@ -1,5 +1,5 @@
 import Main from "!/Main";
-import { useState } from "react";
+import SuspenseWrapper from "@/Suspense";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // import reactLogo from './assets/react.svg'
@@ -9,6 +9,8 @@ const App = () => {
   // const [count, setCount] = useState(0)
 
   return (
+    <SuspenseWrapper>
+
     <BrowserRouter>
       <Routes>
         <Route path="/" Component={Main} />
@@ -17,6 +19,7 @@ const App = () => {
       {/* <Route path="/photo" component={Photo}/>
         <Route path="/rooms" component={Rooms}/> */}
     </BrowserRouter>
+    </SuspenseWrapper>
     // <>
 
     //   <div>
