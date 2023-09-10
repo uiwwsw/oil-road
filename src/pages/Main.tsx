@@ -1,42 +1,49 @@
+import Input from "@/Input";
 import Step from "@/Step";
-import useSWR from 'swr'
-import SuspenseWrapper from "@/Suspense";
+import { useEffect,useState } from "react";
 
-const Title2 = () => {
-  const {data} = useSWR('d2', (url:string) => {
-    throw new Error('알 수 없는 에러 발생방생')
-  });
-return <>ddd: {data}</>
-}
-const Title3 = () => {
-  const {data} = useSWR('d3', (url:string) => {
-    throw new Error('알 수 없는 에러 발생방생')
-  });
-return <>ddd: {data}</>
-}
-const Title = () => {
-  const {data} = useSWR('d1', (url:string) => new Promise(res => setTimeout(() => res('true'), 1000)));
-return <>ddd: {data}</>
-}
 const Main = () => {
+  function onSubmit() {
+    'dawdawdw'
+  }
+  const validator = {
+    key: (name: string) => {
+      return name.length > 3;
+    },
+    key2: (name: string) => {
+      return name.length > 3;
+    }
+  }
 
+  const onStep = (keys: string[]) => {
+    console.log(keys)
+    if(keys.includes('key')) {
+      if(keys.includes('label')) {
+        return 2
+      }
+      return 1
+    }
+    console.log(11111)
+    return 0
+  }
+ 
   return (
-    <>
-      <div className="h-9">dawdawd</div>
-      {/* <NaverMap className="h-56" /> */}
-        <Title2/>
-      <SuspenseWrapper>
-        divdawdwa
-        <Title3 />
-      </SuspenseWrapper>
+      <div className="h-9">dawdawd
+        <Step validator={validator} onSubmit={onSubmit} onStep={onStep}>
+          <div>
+            <Input name="key" />
+            <Input name="key2" />
+            <button>다음</button>
+          </div>
+          <div>
+            <Input name="label" />
+            <button>다음</button>
+          </div>
+          <div>3</div>
+          <div>4</div>
+        </Step>
+      </div>
 
-      <Step>
-        <div></div>
-        <div>2</div>
-        <div>3</div>
-      </Step>
-      dkjaw;ldkawl;kd;awd
-    </>
   );
 };
 
